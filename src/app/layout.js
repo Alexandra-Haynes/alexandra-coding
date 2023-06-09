@@ -1,29 +1,14 @@
-// import './globals.css'
+import "/src/styles/globals.css";
 
-
-
-// export default function RootLayout({ children }) {
-//   return (
-//     <html lang="en">
-//       <body className={inter.className}>{children}</body>
-//     </html>
-//   )
-// }
 
 import React from 'react';
 
 const Layout = ({ children }) => {
   return (
-    <div>
-      <header>
-        {/* Your header content */}
-      </header>
-      <main >
-        {children}
-      </main>
-      <footer>
-        {/* Your footer content */}
-      </footer>
+    <div className="h-screen w-full" id='gradient-background'>
+      <header>{/* Your header content */}</header>
+      <main>{children}</main>
+      <footer>{/* Your footer content */}</footer>
     </div>
   );
 };

@@ -8,3 +8,23 @@
   box-sizing: border-box;
   font-family: Poppins;
 }
+
+#gradient-background {
+  background-color: white;
+  background-image: linear-gradient(60deg, pink, rgb(156, 252, 252), white);
+  background-size: 400% 400%;
+  animation: bgGradient 20s infinite linear;
+
+}
+
+@keyframes bgGradient {
+  0%{
+    background-position: 0 85%;
+  }
+  50% {
+    background-position: 100% 20%;
+  }
+  100% {
+    background-position: 0 85%;
+  }
+}

@@ -7,9 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "gradient-purple": "#8C6DFF",
+        "gradient-blue": "#36D1DC",
+        "gradient-green": "#00E573",
+        "gradient-yellow": "#FDBB39",
+      },
       fontFamily: {
-        abril: 'Abril Fatface',
-        poppins: 'Poppins',
+        abril: "Abril Fatface",
+        poppins: "Poppins",
       },
       keyframes: {
         float: {
