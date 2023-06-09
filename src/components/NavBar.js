@@ -10,7 +10,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} pl-10 whitespace-nowrap text-xl
+      className={`${className} pl-10 whitespace-nowrap text-md
        uppercase font-light hover:text-green-400 transition-colors ease-in-out
        `}
     >
@@ -53,7 +53,7 @@ const NavBar = () => {
           <CustomLink
             href="/contact"
             target="_blank"
-            className="font-abril text-xl lowercase"
+            className=" text-md lowercase"
             title="Contact me"
           />
         </nav>
@@ -82,7 +82,7 @@ const NavBar = () => {
       {isOpen ? (
         <div
           className="lg:w-1/2 max-w-[300px] w-[80%] flex pt-20 pr-10 flex-col justify-end items-end fixed
-      top-0 right-0  bg-white/20  backdrop-blur-md pb-36 z-30 shadow-xl rounded-l-lg"
+      top-0 right-0  bg-white/60  backdrop-blur-md pb-36 z-30 shadow-xl "
         >
           <nav className="flex flex-col justify-center items-center pt-8">
             <MobileCustomLink
@@ -98,7 +98,7 @@ const NavBar = () => {
             <MobileCustomLink
               href="/contact"
               target="_blank"
-              className=" font-light font-abril  text-xl lg:text-5xl lowercase"
+              className=" font-light text-md lg:text-xl lowercase"
               title="Contact me"
               toggle={handleClick}
             />

@@ -7,12 +7,37 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        sm: "375px", //mobile M
+        md: "768px", //tablet
+        lg: "1024px", //laptop
+        xl: "1280px", //laptop L
+        "2xl": "2560px", //4k
+      },
+      fontSize: {
+        sm: "1rem",
+        md: "1.2rem",
+        lg: "1.5rem",
+        xl: "2.5rem",
+        "2xl": "4rem",
+      },
       colors: {
         "gradient-purple": "#8C6DFF",
         "gradient-blue": "#36D1DC",
         "gradient-green": "#00E573",
         "gradient-yellow": "#FDBB39",
       },
+      backgroundImage: {
+        gradientBg: "linear-gradient(60deg, pink, rgb(156, 252, 252), white)",
+        underlinedText1: "linear-gradient(90deg, #85c1e9, #76d7c4)",
+        underlinedText2: "linear-gradient(90deg, #f8c471, #f9e79f)",
+        underlinedText3: "linear-gradient(90deg, #c39bd3, #f1948a)",
+      },
+      backgroundSize: {
+        hugeBg: "400% 400%",
+        underlinedBg: "100% 40%",
+      },
+
       fontFamily: {
         abril: "Abril Fatface",
         poppins: "Poppins",
@@ -28,9 +53,15 @@ module.exports = {
             animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
           },
         },
+        bgAnimation: {
+          "0%": { backgroundPosition: "0 85%" },
+          "50%": { backgroundPosition: "100% 20%" },
+          "100%": { backgroundPosition: "0 65%" },
+        },
       },
       animation: {
         float: "float 5s ease-in-out infinite",
+        bgAnimation: "bgAnimation 20s infinite linear",
       },
     },
   },

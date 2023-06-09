@@ -12,9 +12,7 @@ export default function Home() {
         <About />
         <Projects />
       </main>
-      <footer>
-        <Footer />
-      </footer>
+     
     </>
   );
 }

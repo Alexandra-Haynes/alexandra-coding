@@ -1,14 +1,16 @@
 import "/src/styles/globals.css";
-
-
 import React from 'react';
+import Footer from "@/components/Footer";
+import NavBar from "@/components/NavBar";
+
+
 
 const Layout = ({ children }) => {
   return (
-    <div className="h-screen w-full" id='gradient-background'>
-      <header>{/* Your header content */}</header>
+    <div className="h-screen w-full bg-gradientBg bg-hugeBg animate-bgAnimation">
+      <header><NavBar /></header>
       <main>{children}</main>
-      <footer>{/* Your footer content */}</footer>
+      <footer><Footer /></footer>
     </div>
   );
 };
