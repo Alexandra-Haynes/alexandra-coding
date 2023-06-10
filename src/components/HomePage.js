@@ -1,5 +1,5 @@
 import React from 'react'
-import Layout from '@/app/layout';
+import Layout from '@/components/layout';
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";

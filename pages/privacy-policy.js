@@ -18,7 +18,9 @@ const PrivacyPolicy = () => {
           Alexandra Coding Privacy Policy
         </h1>
         <p className="pt-10 2xl:text-xl">
-          Your privacy is important to us. This Privacy Policy outlines how ALexandra Coding collects, uses, and protects any information you provide
+          Your privacy is important to us. This Privacy Policy outlines 
+          how ALexandra Coding collects, 
+          uses, and protects any information you provide
           while using our website.
         </p>
 

@@ -13,7 +13,7 @@ export const TextBlock = ({ title, text }) => {
   );
 };
 
-const TermsOfUse = () => {
+export default function TermsOfUse () {
   return (
     <>
       <section
@@ -73,4 +73,4 @@ const TermsOfUse = () => {
   );
 };
 
-export default TermsOfUse;
+
