@@ -26,15 +26,16 @@ module.exports = {
         "gradient-blue": "#36D1DC",
         "gradient-green": "#00E573",
         "gradient-yellow": "#FDBB39",
+         bgCyan: "rgb(194, 222, 220)",
       },
       backgroundImage: {
-        gradientBg: "linear-gradient(60deg, pink, rgb(156, 252, 252), white)",
+        gradientBg: "linear-gradient(60deg, white, rgb(194, 222, 220))",
         underlinedText1: "linear-gradient(90deg, #85c1e9, #76d7c4)",
         underlinedText2: "linear-gradient(90deg, #f8c471, #f9e79f)",
         underlinedText3: "linear-gradient(90deg, #c39bd3, #f1948a)",
       },
       backgroundSize: {
-        hugeBg: "400% 400%",
+        hugeBg: "600% 600%",
         underlinedBg: "100% 40%",
       },
 
@@ -61,7 +62,10 @@ module.exports = {
       },
       animation: {
         float: "float 5s ease-in-out infinite",
-        bgAnimation: "bgAnimation 20s infinite linear",
+        bgAnimation: "bgAnimation 18s infinite linear",
+      },
+      gridTemplateColumns: {
+        projectsCard: "4px, 2fr, 1fr",
       },
     },
   },

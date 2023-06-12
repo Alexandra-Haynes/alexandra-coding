@@ -81,8 +81,8 @@ const NavBar = () => {
 
       {isOpen ? (
         <div
-          className="lg:w-1/2 max-w-[300px] w-[80%] flex pt-20 pr-10 flex-col justify-end items-end fixed
-      top-0 right-0  bg-white/60  backdrop-blur-md pb-36 z-30 shadow-xl "
+          className="w-1/2 max-w-[300px] flex pt-20 pr-10 flex-col justify-end items-end fixed
+      top-0 right-0  bg-white/70  backdrop-blur-md pb-36 z-30 shadow-xl "
         >
           <nav className="flex flex-col justify-center items-center pt-8">
             <MobileCustomLink

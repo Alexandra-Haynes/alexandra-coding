@@ -6,23 +6,29 @@ import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black opacity-[85%]">
-      <h4 className="text-center text-white xl:text-4xl text-3xl  pt-10 font-thin">
+    <footer className="w-full bg-black opacity-[85%] text-white">
+      <div className="h-1 grid grid-cols-3">
+        <div className="bg-underlinedText1"></div>
+        <div className="bg-underlinedText2"></div>
+        <div className="bg-underlinedText3"></div>
+      </div>
+      <h4 className="text-center pt-10 font-thin">
         Contact me
       </h4>
 
-      <div className="flex flex-row items-center justify-center text-white py-4">
+      <div className="flex flex-row items-center justify-center py-4">
         <AiOutlineMail fontSize="2rem" />
 
-        <h2 className="pl-2 text-md xl:text-xl">
+        <h2 className="pl-2">
           Email:
-          <span className="text-md xl:text-xl  px-2">
+          <span className="px-2">
             sandamunteanua@yahoo.com
           </span>{" "}
         </h2>
       </div>
 
-      <div className="flex items-center justify-center text-white gap-10  px-20 py-4 text-xl text-center">
+      <div className="flex items-center justify-center gap-10  
+      px-20 py-4  text-center">
         <a
           href="https://github.com/Alexandra-Haynes"
           target="_blank"
@@ -39,13 +45,13 @@ const Footer = () => {
         </a>
       </div>
       <div
-        className="flex flex-col items-center text-white gap-2 
-      justify-center text-sm xl:text-xl pt-6 "
+        className="flex flex-col items-center gap-2 
+      justify-center pt-6 "
       >
         <Link href="/privacy-policy">Privacy Policy</Link>
         <Link href="/terms-of-use">Terms of Use</Link>
       </div>
-      <p className="text-md xl:text-xl font-semibold text-center text-white py-6">
+      <p className="text-center py-6">
         Copyright © Alexandra Coding 2023
       </p>
     </footer>

@@ -3,11 +3,13 @@ import Layout from '@/components/layout';
 import { BsGithub } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import NavBar from './NavBar';
 
 const HomePage = () => {
   return (
     <>
       <Layout>
+        <NavBar />
         <section
           className=" h-screen lg:w-[80%]  w-[92%] flex flex-col items-center justify-center
       mx-auto -translate-y-4 "
