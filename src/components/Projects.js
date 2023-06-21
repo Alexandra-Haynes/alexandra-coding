@@ -28,12 +28,12 @@ const ProjectCard = ({ title, description, skills, image, color }) => {
           </ul>
           <div className="flex flex-row gap-4">
             <button
-              className={` flex items-center justify-center gap-1 border-2 border-black p-1 bg-${color}`}
+              className={` flex items-center justify-center gap-1 border shadow-lg border-black p-1 bg-${color}`}
             >
               <BsEye />
               Live Project
             </button>
-            <button className="flex items-center justify-center gap-1 border-2 border-black p-1">
+            <button className="flex items-center justify-center gap-1 shadow-lg border border-black p-1">
               <BsCode />
               Source Code
             </button>

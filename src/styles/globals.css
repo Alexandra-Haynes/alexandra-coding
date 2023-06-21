@@ -4,8 +4,50 @@
 
 * {
   padding: 0;
-  margin:0;
+  margin: 0;
   box-sizing: border-box;
   font-family: Poppins;
+
+
 }
 
+input,
+textarea {
+ 
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid hsl(0, 0%, 60%);
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+ margin: 5px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: yellow;
+  
+
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label
+{
+top: -35px;
+  font-size: 13px;
+  ;
+}
+
+label {
+  height: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+  padding: 10px;
+  color: white;
+  cursor:text;
+  opacity: .7;
+  transition: 0.2s;
+}

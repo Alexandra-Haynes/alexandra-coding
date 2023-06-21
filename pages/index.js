@@ -4,6 +4,7 @@ import HomePage from "@/components/HomePage";
 import Projects from "@/components/Projects";
 import Footer from "@/components/Footer";
 import React from "react";
+import Contact from "./contact";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
         <HomePage />
         <About />
         <Projects />
+        <Contact />
       </main>
       <footer>
         <Footer />

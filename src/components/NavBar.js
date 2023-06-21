@@ -30,8 +30,8 @@ const MobileCustomLink = ({ href, title, className = "", toggle }) => {
       onClick={handleClick}
       href={href}
       className={`${className} pl-10  lg:text-2xl text-black whitespace-nowrap py-5 
-       uppercase font-light hover:text-green-500 transition-all ease-in-out
-       border-b-[1px] border-black`}
+       uppercase hover:text-green-500 transition-all ease-in-out
+       `}
     >
       {title}
     </button>
@@ -98,7 +98,7 @@ const NavBar = () => {
             <MobileCustomLink
               href="/contact"
               target="_blank"
-              className=" font-light text-md lg:text-xl lowercase"
+              className=" "
               title="Contact me"
               toggle={handleClick}
             />
