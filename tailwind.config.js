@@ -26,10 +26,11 @@ module.exports = {
         "gradient-blue": "#36D1DC",
         "gradient-green": "#00E573",
         "gradient-yellow": "#FDBB39",
-         bgCyan: "rgb(194, 222, 220)",
+        bgCyan: "rgb(194, 222, 220)",
       },
       backgroundImage: {
-        gradientBg: "linear-gradient(60deg, white, rgb(194, 222, 220))",
+        gradientBg:
+          "linear-gradient(60deg, white, rgb(194, 222, 220), rgb(237, 228, 255))",
         underlinedText1: "linear-gradient(90deg, #85c1e9, #76d7c4)",
         underlinedText2: "linear-gradient(90deg, #f8c471, #f9e79f)",
         underlinedText3: "linear-gradient(90deg, #c39bd3, #f1948a)",
@@ -66,6 +67,10 @@ module.exports = {
       },
       gridTemplateColumns: {
         projectsCard: "4px, 2fr, 1fr",
+      },
+      boxShadow: {
+        customShadow: "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px",
+        customShadow2: "rgba(38, 57, 77,.5) 0px 20px 20px -10px",
       },
     },
   },
