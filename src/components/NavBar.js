@@ -10,8 +10,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} pl-10 whitespace-nowrap text-md
-       uppercase font-light hover:text-green-400 transition-colors ease-in-out
+      className={`${className} pl-10 whitespace-nowrap text-md uppercase 
        `}
     >
       {title}
@@ -29,8 +28,8 @@ const MobileCustomLink = ({ href, title, className = "", toggle }) => {
     <button
       onClick={handleClick}
       href={href}
-      className={`${className} pl-10  lg:text-2xl text-black whitespace-nowrap py-5 
-       uppercase hover:text-green-500 transition-all ease-in-out
+      className={`${className} lg:text-2xl text-black whitespace-nowrap my-4 
+       uppercase hover:text-green-500 transition-all ease-in-out w-[100px]
        `}
     >
       {title}
@@ -45,16 +44,24 @@ const NavBar = () => {
   };
   return (
     <header className="t-0 w-full pt-5 px-10 flex justify-between items-center">
-      <p> Logo</p>
+      <img src="logo.png" className="h-10" />
       <div className="lg:flex justify-between items-center hidden">
         <nav>
-          <CustomLink href="#about" title="About" />
-          <CustomLink href="#projects" title="Projects" />
+          <CustomLink
+            href="#about"
+            title="About"
+            className="bg-underlinedText1 bg-bottom bg-underlinedBg bg-no-repeat"
+          />
+          <CustomLink
+            href="#projects"
+            title="Projects"
+            className="ml-4 bg-underlinedText2 bg-bottom bg-underlinedBg bg-no-repeat"
+          />
           <CustomLink
             href="/contact"
             target="_blank"
-            className=" text-md lowercase"
-            title="Contact me"
+            className="ml-4 bg-underlinedText3 bg-bottom bg-underlinedBg bg-no-repeat"
+            title="Contact"
           />
         </nav>
       </div>
@@ -84,22 +91,24 @@ const NavBar = () => {
           className="w-1/2 max-w-[300px] flex pt-20 pr-10 flex-col justify-end items-end fixed
       top-0 right-0  bg-white/70  backdrop-blur-md pb-36 z-30 shadow-xl "
         >
-          <nav className="flex flex-col justify-center items-center pt-8">
+          <nav className="flex flex-col justify-center items-end mt-8">
             <MobileCustomLink
               href="#about"
               title="About"
               toggle={handleClick}
+              className=" bg-underlinedText1 bg-bottom bg-underlinedBg bg-no-repeat"
             />
             <MobileCustomLink
               href="#projects"
               title="Projects"
               toggle={handleClick}
+              className=" bg-underlinedText2 bg-bottom bg-underlinedBg bg-no-repeat"
             />
             <MobileCustomLink
               href="/contact"
               target="_blank"
-              className=" "
-              title="Contact me"
+              className=" bg-underlinedText3 bg-bottom bg-underlinedBg bg-no-repeat"
+              title="Contact"
               toggle={handleClick}
             />
           </nav>

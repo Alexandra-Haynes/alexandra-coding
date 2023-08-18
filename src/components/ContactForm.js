@@ -7,7 +7,7 @@ import { BsSend } from "react-icons/bs";
 
 const ContactForm = () => {
   return (
-    <div>
+    <div id='contact'>
       <div
         className="flex flex-col items-center justify-center h-[90%] w-full 
         bg-black/[78%] py-12 text-white"
