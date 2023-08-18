@@ -43,8 +43,10 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="t-0 w-full pt-5 px-10 flex justify-between items-center">
-      <img src="logo.png" className="h-10" />
+    <header className="fixed t-0 w-full pt-5 px-10 flex justify-between items-center">
+      <Link href="/">
+        <img src="logo.png" className="h-10 cursor-pointer" alt="Company Logo" />
+      </Link>
       <div className="lg:flex justify-between items-center hidden">
         <nav>
           <CustomLink

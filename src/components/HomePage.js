@@ -15,8 +15,9 @@ const HomePage = () => {
       <Layout>
         <NavBar />
         <section
-          className="h-screen lg:w-[80%] w-[92%] flex flex-col items-center 
-          justify-center mx-auto -translate-y-4 "
+          className="h-screen lg:w-[80%] w-[92%] flex 
+          flex-col items-center 
+          justify-center mx-auto  "
         >
           <div
             className="md:grid grid-cols-2 grid-rows-3 flex flex-col  
