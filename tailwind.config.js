@@ -67,6 +67,7 @@ module.exports = {
       },
       gridTemplateColumns: {
         projectsCard: "4px, 2fr, 1fr",
+        projectsCardReversed: "1fr, 2fr, 4px",
       },
       boxShadow: {
         customShadow: "rgba(0, 0, 0, 0.45) 0px 25px 20px -20px",
