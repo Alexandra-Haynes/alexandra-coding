@@ -1,14 +1,13 @@
 import React from "react";
-import { AiFillCheckSquare } from "react-icons/ai";
 import { BsCode, BsEye } from "react-icons/bs";
-import Layout from "./layout";
+
 
 const ProjectCard = ({ title, description, skills, image, color }) => {
   return (
     <>
       <div
         className="border mx-auto border-black shadow-lg h-1/4 grid grid-cols-projectsCard 
-      grid-rows-5 max-w-[1000px] bg-white/80"
+      grid-rows-5 max-w-[1000px] bg-white"
       >
         <div className={`h-full w-2 row-span-5 bg-${color}`}></div>
         <div
@@ -42,9 +41,9 @@ const ProjectCard = ({ title, description, skills, image, color }) => {
 
         <div
           className="h-full row-span-5 overflow-hidden object-center
-        flex items-center justify-center bg-black/70 "
+        flex items-center justify-center "
         >
-          <img src={image} className=" max-h-[340px] border border-black" />
+          <img src={image} className=" max-h-[340px]" />
         </div>
       </div>
     </>
@@ -59,11 +58,10 @@ const Projects = () => {
       justify-center items-center bg-bgCyan">
         <h1 className="font-semibold text-lg">Projects</h1>
         <ProjectCard
-          title="Discover Romania"
-          description="A website that presents interesting facts about Romania, 
-     visiting tips and a photo gallery."
-          skills={["React", "JS", "CSS"]}
-          image="mockup1.png"
+          title="ReLeaf"
+          description="A mobile app where people can sell house plants or bid to buy some."
+          skills={["React Native", "Expo",]}
+          image="mockups2.png"
           color="underlinedText1"
         />
 
@@ -71,15 +69,16 @@ const Projects = () => {
           title="Code with ALoha"
           description="Code with Aloha is a volunteer group working on civic projects."
           skills={["React", "Next", "Tailwind", "Motion"]}
-          image="mockup2.png"
+          image="mockups1.png"
           color="underlinedText2"
         />
 
         <ProjectCard
-          title="Art portfolio"
-          description="I designed a website I can use as my art portfolio for my illustration freelance job."
-          skills={["React", "Next", "CSS"]}
-          image="mockup3.png"
+          title="My workouts"
+          description="A full stack fitness website where users can search for exercise, 
+          create and submit workouts and achieve badges."
+          skills={["Next", "MongoDB", "Tailwind"]}
+          image="mockups3.png"
           color="underlinedText3"
         />
       </div>
