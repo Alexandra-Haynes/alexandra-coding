@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <div
       className="row-span-3 h-fit w-full 
-    flex flex-col items-start ml-2 justify-center"
+    flex flex-col items-start ml-2 justify-center md:scale-[115%]"
     >
       <div className=" mt-12 flex flex-col items-start justify-between gap-6">
         {/* ____________FRONTEND___________ */}

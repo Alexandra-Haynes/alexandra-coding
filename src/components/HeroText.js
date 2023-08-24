@@ -5,7 +5,7 @@ import SocialIcons from "./SocialIcons";
 const HeroText = () => {
   return (
     <div className="col-span-2 md:px-12 px-4 pt-8  text-left">
-      <h2 className="font-abril text-lg opacity-10 md:text-xl xl:text-xl ">
+      <h2 className="font-abril text-md opacity-10 md:text-lg xl:text-xl ">
         Hi, I'm
       </h2>
       <h1 className="font-abril text-[2rem] md:text-xl xl:text-2xl ">
@@ -22,14 +22,14 @@ const HeroText = () => {
       </div>
 
       <p className="font-poppins md:text-base/6 lg:text-md w-2/3 pb-8">
-        A creative frontend developer with roots in art, based in Hawaii.
+        A creative frontend developer, based in Hawaii.
         Checkout my projects section and let's get in touch.
         {/* <br />I believe that digital marvels start with a strong team! */}
       </p>
       <Button
         text="Contact me"
         scrollToId="contact"
-        className=" -ml-3 md:ml-0 md:mt-8 scale-75 md:scale-100"
+        className=" -ml-3 md:ml-0 md:mt-8 scale-75 md:scale-100 hover:scale-75 md:hover:scale-100"
       />
     </div>
   );
