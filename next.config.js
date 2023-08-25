@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export'
+  output: "export",
+  basePath: "/alexandra-coding",
+  assetPrefix: "/alexandra-coding/"
 };
 
 module.exports = nextConfig
