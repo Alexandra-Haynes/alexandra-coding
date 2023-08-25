@@ -1,24 +1,27 @@
 {
   "name": "alexandra-coding",
-  "homepage": "http://alexandracoding.com/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy": "gh-pages -d out",
+    "build:tailwind": "tailwindcss build src/styles/tailwind-source.css -o src/styles/globals.css"
   },
   "dependencies": {
-    "autoprefixer": "10.4.14",
-    "next": "^13.4.17",
-    "postcss": "8.4.24",
+    "autoprefixer": "^10.4.14",
+    "next": "^13.4.19",
+    "postcss": "^8.4.24",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
-    "@types/next": "^9.0.0"
+    "@types/next": "^9.0.0",
+    "gh-pages": "^6.0.0"
   }
 }
