@@ -87,7 +87,7 @@ const Projects = () => {
         <ProjectCard
           title="ReLeaf"
           description="A mobile app where people can sell house plants or bid to buy some."
-          tools={["React Native", "Expo"]}
+          tools={["react_native", "expo"]}
           image="mockups2.png"
           color="underlinedText1"
           githubLink=""
@@ -97,7 +97,7 @@ const Projects = () => {
         <ReversedProjectCard
           title="Code with ALoha"
           description="Code with Aloha is a volunteer group working on civic projects."
-          tools={["React", "NextJS", "TailwindCSS", "Framer Motion"]}
+          tools={["react", "nextjs", "tailwindcss", "framer_motion"]}
           image="mockups1.png"
           color="underlinedText2"
           githubLink=""
@@ -108,7 +108,7 @@ const Projects = () => {
           title="My workouts"
           description="A full stack fitness website where users can search for exercise, 
           create and submit workouts and achieve badges."
-          tools={["NextJS", "NextAuth", "MongoDB", "TailwindCSS"]}
+          tools={["nextjs", "nextauth", "mongodb", "tailwindcss"]}
           image="mockups3.png"
           color="underlinedText3"
           githubLink=""

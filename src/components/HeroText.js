@@ -29,7 +29,7 @@ const HeroText = () => {
       <Button
         text="Contact me"
         scrollToId="contact"
-        className=" -ml-3 md:ml-0 md:mt-8 scale-75 md:scale-100 hover:scale-75 md:hover:scale-100"
+        className=" -ml-3 md:ml-0 md:mt-8 scale-75 md:scale-100  md:hover:scale-100"
       />
     </div>
   );
