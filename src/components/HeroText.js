@@ -6,9 +6,9 @@ const HeroText = () => {
   return (
     <div className="col-span-2 md:px-12 px-4 pt-8  text-left">
       <h2 className="font-abril text-md opacity-10 md:text-lg xl:text-xl ">
-        Hi, I'm
+        hi, I'm
       </h2>
-      <h1 className="font-abril text-[2rem] md:text-xl xl:text-2xl ">
+      <h1 className="font-abril text-[2rem] md:text-xl xl:text-xl ">
         Alexandra Haynes
       </h1>
       {/* <h2 className="font-abril text-xl py-2 uppercase text-black/60 
@@ -21,7 +21,8 @@ const HeroText = () => {
         </div>
       </div>
 
-      <p className="font-poppins md:text-base/6 lg:text-md w-2/3 pb-8">
+      <p className="font-poppins md:text-base/6 lg:text-sm 
+      w-2/3 min-w-[300px] pb-8 opacity-90">
         A creative frontend developer, based in Hawaii.
         Checkout my projects section and let's get in touch.
         {/* <br />I believe that digital marvels start with a strong team! */}

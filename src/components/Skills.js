@@ -3,13 +3,14 @@ import React from "react";
 const Skills = () => {
   return (
     <div
-      className="row-span-3 h-fit w-full 
-    flex flex-col items-start ml-2 justify-center md:scale-[115%]"
+      className="row-span-3 h-fit w-full  text-slate-400 pb-12 xl:pb-0 xl:pl-0
+    flex flex-col items-start ml-16 md:ml-24  xl:ml-0  justify-center xl:scale-[125%] "
     >
+      
       <div className=" mt-12 flex flex-col items-start justify-between gap-6">
         {/* ____________FRONTEND___________ */}
-        <div className=" flex flex-col gap-2 mb-6 items-start justify-center ">
-          <h3 className="font-semibold">Frontend Skills:</h3>
+        <div className=" flex flex-col gap-2 mb-8 items-start justify-center ">
+          <h3 className="font-thin">Frontend Skills</h3>
           <div className="grid grid-cols-5 items-center justify-start gap-2">
             <img
               src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
@@ -77,8 +78,8 @@ const Skills = () => {
           </div>
         </div>
         {/* ____________BACKEND_______ */}
-        <div className="w-full flex flex-col gap-2 mb-6 items-start justify-center">
-          <h3 className="font-semibold">Backend Skills:</h3>
+        <div className="w-full flex flex-col gap-2 mb-8 items-start justify-center">
+          <h3 className="font-thin">Backend Skills</h3>
           <div className="flex flex-row items-center justify-start gap-2">
             <img
               src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg"
@@ -104,8 +105,8 @@ const Skills = () => {
           </div>
         </div>
         {/* ___________MOBILE DEV _____________*/}
-        <div className="w-full flex flex-col gap-2 mb-6 items-start justify-center">
-          <h3 className="font-semibold">Mobile development:</h3>
+        <div className="w-full flex flex-col gap-2 mb-8 items-start justify-center">
+          <h3 className="font-thin">Mobile development</h3>
           <div className="flex flex-row items-center justify-start gap-2">
             <img
               src="https://lucide.dev/framework-logos/react-native.svg"
@@ -125,7 +126,7 @@ const Skills = () => {
         </div>
         {/* ___________Other _____________*/}
         <div className=" scale-95 w-full flex flex-col gap-2 mb-6 items-start justify-center">
-          <h3 className="font-semibold">Other:</h3>
+          <h3 className="font-thin">Other:</h3>
           <div className="grid grid-cols-5 items-center justify-start gap-2">
             <img
               src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg"

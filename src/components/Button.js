@@ -22,7 +22,7 @@ function Button({ text, onClick, scrollToId, className='' }) {
       className={`${className}  px-6 md:px-12 py-3 md:py-3 
       rounded-sm  whitespace-nowrap 
     cursor-pointer bg-slate-700 text-white shadow-customShadow2 uppercase
-    hover:scale-[103%] hover:-translate-y-[2px] transition-all ease-in-out`}
+     hover:-translate-y-[2px] transition-all ease-in-out`}
     >
       {text}
     </button>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-
 import { useRouter } from "next/router";
 import { useState } from "react";
 
@@ -10,7 +9,7 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className} pl-10 whitespace-nowrap text-md uppercase 
+      className={`${className} pl-10 whitespace-nowrap text-md uppercase hover:animate-pulse
        `}
     >
       {title}
@@ -37,17 +36,20 @@ const MobileCustomLink = ({ href, title, className = "", toggle }) => {
   );
 };
 
+
+
+
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="fixed t-0 w-full pt-5 px-10 flex justify-between items-center">
+    <header className="fixed t-0 w-full pt-5 px-10 flex justify-between items-center ">
       <Link href="/">
         <img src="logo.png" className="h-10 cursor-pointer" alt="Company Logo" />
       </Link>
-      <div className="lg:flex justify-between items-center hidden">
+      <div className="md:flex justify-between items-center hidden">
         <nav>
           <CustomLink
             href="#about"
@@ -60,7 +62,7 @@ const NavBar = () => {
             className="ml-4 bg-underlinedText2 bg-bottom bg-underlinedBg bg-no-repeat"
           />
           <CustomLink
-            href="/contact"
+            href="#contact"
             target="_blank"
             className="ml-4 bg-underlinedText3 bg-bottom bg-underlinedBg bg-no-repeat"
             title="Contact"
@@ -70,11 +72,12 @@ const NavBar = () => {
 
       {/* ____________________mobile menu______________________________ */}
       <button
-        className="flex flex-col justify-center items-center lg:hidden z-50"
+        className="flex flex-col justify-center items-center md:hidden z-50"
         onClick={handleClick}
       >
         <span
-          className={`bg-black block h-0.5 w-6 rounded-sm transition-all 300ms ease-in-out 
+          className={`bg-black block h-0.5 w-6 rounded-sm transition-all 
+          300ms ease-in-out 
           ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"}`}
         ></span>
         <span
@@ -90,8 +93,9 @@ const NavBar = () => {
 
       {isOpen ? (
         <div
-          className="w-1/2 max-w-[300px] flex pt-20 pr-10 flex-col justify-end items-end fixed
-      top-0 right-0  bg-white/70  backdrop-blur-md pb-36 z-30 shadow-xl "
+          className="w-1/2 max-w-[300px] flex pt-20 pr-10 flex-col justify-end 
+          items-end fixed top-0 right-0  bg-white/70  backdrop-blur-md pb-36 
+          z-30 shadow-xl "
         >
           <nav className="flex flex-col justify-center items-end mt-8">
             <MobileCustomLink

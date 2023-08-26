@@ -10,33 +10,39 @@ const ContactForm = () => {
   return (
     <section id="contact">
       <div
-        className="flex flex-col items-center justify-center h-[90%] w-full 
-        bg-black/[78%] pb-12 pt-24 text-white/90"
+        className="flex flex-col items-center justify-center gap-2 h-[90%] w-full 
+        bg-black/[78%] pb-24 pt-24 text-white/90 "
       >
-        <h1 className="uppercase text-md">Contact form</h1>
+        <h1 className="uppercase text-md ">Contact form</h1>
         <form
-          action="https://formsubmit.co/9db0604b4df6608546978c63cdad3ed0"
+          action="https://formsubmit.co/sandamunteanua@yahoo.com"
           method="POST"
           className="flex flex-col items-center justify-center 
-         py-12 min-w-[500px]"
+         py-12 min-w-[500px] gap-2"
         >
           {/* _thank you page_ */}
-          <input
+          {/* <input
             type="hidden"
             name="_next"
-            value="http://http://localhost:3000//thankyou"
-          />
-          <input
+            value="http://http://localhost:3000/thankyou"
+          /> */}
+          {/* <input
             type="hidden"
             name="_subject"
             value="New alexandracoding.com"
-          ></input>
+          ></input> */}
 
           <div
             className="flex flex-row items-center justify-center 
           mb-[30px] relative min-w-[300px]"
           >
-            <input type="text" required id="name" name="name"></input>
+            <input
+              type="text"
+              required
+              id="name"
+              name="name"
+              className="h-8 pl-4"
+            ></input>
             <label
               htmlFor="name"
               className="flex flex-row items-center justify-center gap-1"
@@ -50,7 +56,13 @@ const ContactForm = () => {
             className="flex flex-row items-center justify-center mb-[30px]
           min-w-[300px] relative"
           >
-            <input type="text" name="number" required id="number"></input>
+            <input
+              type="text"
+              name="number"
+              required
+              id="number"
+              className="h-8 pl-4"
+            ></input>
             <label
               htmlFor="number"
               className="flex flex-row items-center justify-center gap-1"
@@ -64,7 +76,13 @@ const ContactForm = () => {
             className="flex flex-row items-center justify-center 
            relative min-w-[300px] mb-[30px]"
           >
-            <input type="email" required id="email" name="email"></input>
+            <input
+              type="email"
+              required
+              id="email"
+              name="email"
+              className="h-8 pl-4"
+            ></input>
             <label
               htmlFor="email"
               className="flex flex-row items-center justify-center gap-1"
@@ -77,7 +95,7 @@ const ContactForm = () => {
             className="mb-[30px] flex flex-row items-center justify-center 
            relative min-w-[300px]"
           >
-            <textarea id="message" rows="8" cols="28" required></textarea>
+            <textarea id="message" rows="8" cols="28" required className="pl-4 pt-2"></textarea>
             <label
               htmlFor="message"
               className="flex flex-row items-start justify-center gap-1"

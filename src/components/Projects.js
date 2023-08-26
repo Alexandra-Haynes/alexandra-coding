@@ -30,11 +30,11 @@ const ToolsList = ({ tools }) => (
 const ProjectCardContent = ({ title, description, tools, color, githubLink, liveLink, reversed }) => {
   return (
     <div className={`row-span-5 flex flex-col ${reversed ? "items-end" : "items-start"} justify-around p-8`}>
-      <h1 className="text-lg pb-2">{title}</h1>
+      <h1 className="text-md pb-2">{title}</h1>
       <div className="h-[1px] w-1/2 bg-black/10 mb-6"></div>
-      <p className={`max-w-[400px] ${reversed ? "text-right" : ""}`}>{description}</p>
-      <div className="flex flex-row gap-4 pt-6">
-        <LinkButton link={liveLink} color={color} icon={<BsEye />} text="Live Project" />
+      <p className={`max-w-[400px] text-[.8rem] ${reversed ? "text-right" : ""}`}>{description}</p>
+      <div className="flex flex-row gap-4 pt-6 whitespace-nowrap text-[.7rem]">
+        <LinkButton link={liveLink} color={color} icon={<BsEye />} text="Live Project" className='whitespace-nowrap'/>
         <LinkButton link={githubLink} icon={<BsCode />} text="Source Code" />
       </div>
       <ToolsList tools={tools} />
@@ -44,7 +44,8 @@ const ProjectCardContent = ({ title, description, tools, color, githubLink, live
 
 const ProjectCard = (props) => {
   return (
-    <div className={`border mx-auto shadow-lg h-1/4 grid grid-cols-projectsCard grid-rows-5 max-w-[1000px] bg-white`}>
+    <div className={`border mx-auto shadow-lg h-1/4 grid grid-cols-projectsCard 
+    grid-rows-5 max-w-[1000px] bg-white`}>
       <div className={`h-full w-2 row-span-5 bg-${props.color}`}></div>
       <ProjectCardContent {...props} />
       <div className="h-full row-span-5 overflow-hidden object-center flex items-center justify-center">
@@ -56,7 +57,7 @@ const ProjectCard = (props) => {
 
 const ReversedProjectCard = (props) => {
   return (
-    <div className={`border mx-auto shadow-lg h-1/4 grid grid-cols-projectsCardReversed grid-rows-5 max-w-[1000px] bg-white`}>
+    <div className={`border  mx-auto shadow-lg h-1/4 grid grid-cols-projectsCardReversed grid-rows-5 max-w-[1000px] bg-white`}>
       <div className="h-full row-span-5 overflow-hidden object-center flex items-center justify-center">
         <img src={props.image} className=" max-h-[340px]" />
       </div>
@@ -69,19 +70,22 @@ const ReversedProjectCard = (props) => {
 
 const Projects = () => {
   return (
-    <>
+    <section id="projects" className="">
       <div
-        className="h-fit min-h-screen p-4 pt-24 pb-6  flex flex-col gap-4 
-      justify-center items-center bg-bgCyan"
+        className="h-fit min-h-screen p-4 pt-24  flex flex-col gap-4 
+      justify-center items-center bg-bgCyan pb-12 "
       >
-        <div className="relative">
+        <div className="relative mb-4">
           <h2
             className="font-semibold text-xl uppercase absolute
-         text-white/50 left-1 top-1"
+         text-cyan-100/50 left-1 top-1"
           >
             Projects
           </h2>
           <h1 className="font-semibold text-xl relative uppercase">Projects</h1>
+
+       
+          
         </div>
 
         <ProjectCard
@@ -115,7 +119,7 @@ const Projects = () => {
           liveLink=""
         />
       </div>
-    </>
+    </section>
   );
 };
 
