@@ -15,7 +15,7 @@ const ContactForm = () => {
       >
         <h1 className="uppercase text-md ">Contact form</h1>
         <form
-          action="https://formsubmit.co/sandamunteanua@yahoo.com"
+          action="https://formsubmit.co/9db0604b4df6608546978c63cdad3ed0"
           method="POST"
           className="flex flex-col items-center justify-center 
          py-12 min-w-[500px] gap-2"
