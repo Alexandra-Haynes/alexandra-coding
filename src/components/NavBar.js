@@ -46,7 +46,7 @@ const NavBar = () => {
   };
   return (
     <header className="fixed t-0 w-[98%] pt-5 px-6 flex 
-    justify-between items-center ">
+    justify-between items-center z-50">
       <Link href="/">
         <img src="logo.png" className="h-10 cursor-pointer" alt="Company Logo" />
       </Link>
@@ -77,17 +77,17 @@ const NavBar = () => {
         onClick={handleClick}
       >
         <span
-          className={`bg-black block h-0.5 w-6 rounded-sm transition-all 
+          className={`bg-black block h-0.5 w-4 rounded-sm transition-all 
           300ms ease-in-out 
           ${isOpen ? "rotate-45 translate-y-1" : "-translate-y-1"}`}
         ></span>
         <span
-          className={`bg-black block h-0.5 w-6 rounded-sm m-0.5 ${
+          className={`bg-black block h-0.5 w-4 rounded-sm m-0.5 ${
             isOpen ? "opacity-0" : "opacity-100"
           }`}
         ></span>
         <span
-          className={`bg-black block h-0.5 w-6 rounded-sm transition-all 300ms ease-in-out 
+          className={`bg-black block h-0.5 w-4 rounded-sm transition-all 300ms ease-in-out 
           ${isOpen ? "-rotate-45 -translate-y-1" : "translate-y-1"}`}
         ></span>
       </button>
