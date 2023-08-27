@@ -95,7 +95,8 @@ const ContactForm = () => {
             className="mb-[30px] flex flex-row items-center justify-center 
            relative min-w-[300px]"
           >
-            <textarea id="message" rows="8" cols="28" required className="pl-4 pt-2"></textarea>
+            <textarea id="message" rows="8" cols="26" required name='message'
+            className="pl-4 pt-2"></textarea>
             <label
               htmlFor="message"
               className="flex flex-row items-start justify-center gap-1"

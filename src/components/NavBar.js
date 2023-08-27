@@ -45,7 +45,8 @@ const NavBar = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <header className="fixed t-0 w-full pt-5 px-10 flex justify-between items-center ">
+    <header className="fixed t-0 w-[98%] pt-5 px-6 flex 
+    justify-between items-center ">
       <Link href="/">
         <img src="logo.png" className="h-10 cursor-pointer" alt="Company Logo" />
       </Link>
@@ -54,7 +55,7 @@ const NavBar = () => {
           <CustomLink
             href="#about"
             title="About"
-            className="bg-underlinedText1 bg-bottom bg-underlinedBg bg-no-repeat"
+            className="bg-underlinedText1 bg-bottom bg-underlinedBg bg-no-repeat "
           />
           <CustomLink
             href="#projects"
@@ -95,7 +96,7 @@ const NavBar = () => {
         <div
           className="w-1/2 max-w-[300px] flex pt-20 pr-10 flex-col justify-end 
           items-end fixed top-0 right-0  bg-white/70  backdrop-blur-md pb-36 
-          z-30 shadow-xl "
+          z-100 shadow-xl min-w-[200px] "
         >
           <nav className="flex flex-col justify-center items-end mt-8">
             <MobileCustomLink
