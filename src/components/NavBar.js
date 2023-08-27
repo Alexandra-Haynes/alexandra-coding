@@ -68,6 +68,7 @@ const NavBar = () => {
             className="ml-4 bg-underlinedText3 bg-bottom bg-underlinedBg bg-no-repeat"
             title="Contact"
           />
+          
         </nav>
       </div>
 

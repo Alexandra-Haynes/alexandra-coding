@@ -42,6 +42,8 @@ const SocialIcons = () => {
           style={{ minWidth: "36px", maxWidth: "46px", height: "auto" }}
         />{" "}
       </div>
+
+    
       <a
         href="https://github.com/Alexandra-Haynes"
         target="_blank"

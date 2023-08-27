@@ -7,7 +7,7 @@ const About = () => {
   return (
     <>
       <section
-        id='about'
+        id="about"
         className="h-fit min-h-screen  w-full px-12 lg:px-48 flex 
           flex-col xl:flex-row  xl:gap-52
            border-black border-y items-center 
@@ -18,11 +18,13 @@ const About = () => {
             justify-between my-8"
         >
           <AboutMeText />
-          <Button
-            text="Download CV"
-            scrollToId=""
-            className="md:ml-5 md:mt-4 scale-75 md:scale-100"
-          />
+          <a href="/resume.pdf" download>
+            <Button
+              text="Download resume"
+              scrollToId=""
+              className="md:ml-5 md:mt-4 scale-75 md:scale-100"
+            />
+          </a>
         </div>
         <Skills />
 
