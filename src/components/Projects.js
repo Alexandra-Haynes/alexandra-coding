@@ -89,7 +89,7 @@ const Projects = () => {
           title="My workouts"
           description="A full stack fitness website where users can search for exercise, 
           create and submit workouts and achieve badges."
-          tools={["nextjs", "nextauth", "mongodb", "tailwindcss"]}
+          tools={["nextjs", "nextauth", "mongodb", "tailwind"]}
           image="mockups3.png"
           color="underlinedText3"
           githubLink="https://github.com/Alexandra-Haynes/fitness-app"
@@ -97,21 +97,30 @@ const Projects = () => {
         />
 
         <ReversedProjectCard
-          title="Code with ALoha"
-          description="Code with Aloha is a volunteer group working on civic projects."
-          tools={["react", "nextjs", "tailwindcss", "framer_motion"]}
+          title="Code with Aloha"
+          description="Code with Aloha is a civic-minded volunteers group 
+          interested in using technology and open data to make local 
+          communities better. I am proud to be part of this amazing group and
+          the first project I contributed with was building a fresh website
+          in NextJS to better represent the groups' needs and style."
+          tools={["react", "nextjs", "tailwind", "framer_motion"]}
           image="mockups1.png"
           color="underlinedText2"
           githubLink="https://github.com/CodeWithAloha/CWAWebsite"
           liveLink="https://code-with-aloha.vercel.app/"
         />
         <ProjectCard
-          title="ReLeaf"
-          description="A mobile app where people can sell house plants or bid to buy some."
+          title="Bayze mobile"
+          description="A frontend mobile app built for Bayze Inc startup, as a 
+          social media platform for Bayze members to connect with thier friends, see the 
+          latest badges and achievements they earned and share their own. 
+          This React Native app has some important functionalities: see 
+           and search posts, see badges earned for each app that usrs Bayze, 
+           receive notifications and your profile"
           tools={["react_native", "expo"]}
           image="mockups2.png"
           color="underlinedText1"
-          githubLink="https://github.com/Alexandra-Haynes/ReLeaf-app"
+          githubLink="https://github.com/Alexandra-Haynes/bayze-mobile"
           liveLink=""
         />
       </div>
