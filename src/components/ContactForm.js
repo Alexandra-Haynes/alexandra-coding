@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 
 import { CiUser } from "react-icons/ci";
 import { AiOutlinePhone } from "react-icons/ai";
@@ -7,6 +7,16 @@ import { MdAlternateEmail, MdOutlineMarkEmailUnread } from "react-icons/md";
 import { BsSend } from "react-icons/bs";
 
 const ContactForm = () => {
+  const [email, setEmail] = useState(""); 
+  const [isEmailValid, setIsEmailValid] = useState(true);
+
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+  
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setIsEmailValid(emailRegex.test(e.target.value));
+  };
+
   return (
     <section id="contact">
       <div
@@ -74,14 +84,16 @@ const ContactForm = () => {
 
           <div
             className="flex flex-row items-center justify-center 
-           relative min-w-[300px] mb-[30px]"
+           relative min-w-[300px] mb-[5px]"
           >
             <input
               type="email"
               required
               id="email"
               name="email"
+              onChange={handleEmailChange}
               className="h-8 pl-4"
+              placeholder=" "
             ></input>
             <label
               htmlFor="email"
@@ -91,12 +103,22 @@ const ContactForm = () => {
               Email
             </label>
           </div>
+          {!isEmailValid && (
+            <p className="text-red-500 text-[.7rem]">Invalid email format</p>
+          )}
+
           <div
             className="mb-[30px] flex flex-row items-center justify-center 
-           relative min-w-[300px]"
+           relative min-w-[300px] mt-[30px]"
           >
-            <textarea id="message" rows="8" cols="26" required name='message'
-            className="pl-4 pt-2"></textarea>
+            <textarea
+              id="message"
+              rows="8"
+              cols="26"
+              required
+              name="message"
+              className="pl-4 pt-2"
+            ></textarea>
             <label
               htmlFor="message"
               className="flex flex-row items-start justify-center gap-1"
