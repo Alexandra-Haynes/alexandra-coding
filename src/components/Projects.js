@@ -83,30 +83,7 @@ const Projects = () => {
             Projects
           </h2>
           <h1 className="font-semibold text-xl relative uppercase">Projects</h1>
-
-       
-          
         </div>
-
-        <ProjectCard
-          title="ReLeaf"
-          description="A mobile app where people can sell house plants or bid to buy some."
-          tools={["react_native", "expo"]}
-          image="mockups2.png"
-          color="underlinedText1"
-          githubLink=""
-          liveLink=""
-        />
-
-        <ReversedProjectCard
-          title="Code with ALoha"
-          description="Code with Aloha is a volunteer group working on civic projects."
-          tools={["react", "nextjs", "tailwindcss", "framer_motion"]}
-          image="mockups1.png"
-          color="underlinedText2"
-          githubLink=""
-          liveLink=""
-        />
 
         <ProjectCard
           title="My workouts"
@@ -115,7 +92,26 @@ const Projects = () => {
           tools={["nextjs", "nextauth", "mongodb", "tailwindcss"]}
           image="mockups3.png"
           color="underlinedText3"
-          githubLink=""
+          githubLink="https://github.com/Alexandra-Haynes/fitness-app"
+          liveLink="https://myworkouts.vercel.app/"
+        />
+
+        <ReversedProjectCard
+          title="Code with ALoha"
+          description="Code with Aloha is a volunteer group working on civic projects."
+          tools={["react", "nextjs", "tailwindcss", "framer_motion"]}
+          image="mockups1.png"
+          color="underlinedText2"
+          githubLink="https://github.com/CodeWithAloha/CWAWebsite"
+          liveLink="https://code-with-aloha.vercel.app/"
+        />
+        <ProjectCard
+          title="ReLeaf"
+          description="A mobile app where people can sell house plants or bid to buy some."
+          tools={["react_native", "expo"]}
+          image="mockups2.png"
+          color="underlinedText1"
+          githubLink="https://github.com/Alexandra-Haynes/ReLeaf-app"
           liveLink=""
         />
       </div>

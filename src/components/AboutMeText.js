@@ -5,15 +5,17 @@ import SocialIcons from "./SocialIcons";
 const AboutMeText = () => {
   return (
     <div className="px-4 pt-8  text-left opacity-90 ">
-      <h2 className="font-abril text-lg opacity-10 md:text-[1.7rem] ">
+      <h2 className="font-abril text-lg opacity-10 md:text-[1.7rem] text-base/3 ">
         a few words
       </h2>
       <h1 className="font-abril text-[2rem] md:text-xl xl:text-2xl ">
         about me
       </h1>
 
-      <p className="font-poppins md:text-base/6 
-       text-[.8rem] w-full pb-8 xl:w-[600px]">
+      <p
+        className="font-poppins md:text-base/6 
+       text-[.8rem] w-full pb-8 xl:w-[700px] xl:mr-[100px] text-justify"
+      >
         <br />
         Before my dive into the digital world, I proudly served in the Romanian
         military. My tenure included graduating from a military high school and
