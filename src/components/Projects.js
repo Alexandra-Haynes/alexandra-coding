@@ -1,5 +1,8 @@
 import React from "react";
+import Image from "next/image";
 import { BsCode, BsEye } from "react-icons/bs";
+
+
 
 const LinkButton = ({ link, color, icon, text }) => {
   return (
@@ -29,14 +32,29 @@ const ToolsList = ({ tools }) => (
 
 const ProjectCardContent = ({ title, description, tools, color, githubLink, liveLink, reversed }) => {
   return (
-    <div className={`row-span-5 flex flex-col ${reversed ? "items-end" : "items-start"} justify-around p-8`}>
+    <div
+      className={`row-span-5 flex flex-col ${
+        reversed ? "items-end" : "items-start"
+      } justify-around p-8`}
+    >
       <h1 className="text-md pb-2">{title}</h1>
-      <div className="h-[1px] w-1/2 bg-black/10 mb-6"></div>
-      <p className={`max-w-[400px] text-[.8rem] ${reversed ? "text-right" : ""}`}>{description}</p>
-      <div className="flex flex-row gap-4 pt-6 whitespace-nowrap text-[.7rem]">
-        <LinkButton link={liveLink} color={color} icon={<BsEye />} text="Live Project" className='whitespace-nowrap'/>
+      <div className="h-[1px] w-1/2 bg-black/10 mb-2"></div>
+      <div className="flex flex-row gap-4 pt-2 pb-6 whitespace-nowrap text-[.7rem]">
+        <LinkButton
+          link={liveLink}
+          color={color}
+          icon={<BsEye />}
+          text="Live Project"
+          className="whitespace-nowrap"
+        />
         <LinkButton link={githubLink} icon={<BsCode />} text="Source Code" />
       </div>
+
+      <p
+        className={`max-w-[800px] text-justify text-[.8rem] ${reversed ? "text-right" : ""}`}
+      >
+        {description}
+      </p>
       <ToolsList tools={tools} />
     </div>
   );
@@ -44,11 +62,17 @@ const ProjectCardContent = ({ title, description, tools, color, githubLink, live
 
 const ProjectCard = (props) => {
   return (
-    <div className={`border mx-auto shadow-lg h-1/4 grid grid-cols-projectsCard 
-    grid-rows-5 max-w-[1000px] bg-white`}>
+    <div
+      className={`border mx-auto shadow-lg h-1/4 md:grid grid-cols-projectsCard 
+    grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
+    >
       <div className={`h-full w-2 row-span-5 bg-${props.color}`}></div>
+
       <ProjectCardContent {...props} />
-      <div className="h-full row-span-5 overflow-hidden object-center flex items-center justify-center">
+      <div
+        className="h-full row-span-5 overflow-hidden object-center 
+      flex items-center justify-center"
+      >
         <img src={props.image} className=" max-h-[340px]" />
       </div>
     </div>
@@ -57,8 +81,14 @@ const ProjectCard = (props) => {
 
 const ReversedProjectCard = (props) => {
   return (
-    <div className={`border  mx-auto shadow-lg h-1/4 grid grid-cols-projectsCardReversed grid-rows-5 max-w-[1000px] bg-white`}>
-      <div className="h-full row-span-5 overflow-hidden object-center flex items-center justify-center">
+    <div
+      className={`border  mx-auto shadow-lg h-1/4 md:grid 
+    grid-cols-projectsCardReversed grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
+    >
+      <div
+        className="h-full row-span-5 overflow-hidden object-center 
+      flex items-center justify-center"
+      >
         <img src={props.image} className=" max-h-[340px]" />
       </div>
       <ProjectCardContent {...props} reversed />
@@ -86,9 +116,104 @@ const Projects = () => {
         </div>
 
         <ProjectCard
-          title="My workouts"
-          description="A full stack fitness website where users can search for exercise, 
-          create and submit workouts and achieve badges."
+          title="Full Stack Fitness Platform"
+          description={
+            <div>
+              <div className="flex flex-row items-center justify-start gap-3">
+                <img
+                  src="./features.png"
+                  width={32}
+                  height={32}
+                  alt="features"
+                />
+                <p>
+                  Developed a comprehensive fitness web application with the
+                  following features:
+                </p>
+              </div>
+
+              <ul
+                className="mt-2 flex flex-col items-start justify-center
+               gap-2"
+              >
+                <li>
+                  <strong>Exercise Database:</strong> Enabled users to dive deep
+                  into an expansive collection of over 800 individual exercises.
+                  Features include:
+                  <ul className="flex flex-col items-start gap-3 pl-4 py-2">
+                    <li>
+                      - Advanced search capabilities allowing users to filter
+                      exercises by category, difficulty level, targeted muscle,
+                      and required equipment;
+                    </li>
+                    <li>
+                      - Comprehensive exercise overviews featuring video
+                      tutorials and detailed, step-by-step instructions;
+                    </li>
+                    <li>
+                      - Personalized experience where users can save exercises
+                      of interest and later access them in their account
+                      section, enhancing user engagement.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>Workout Creation & Submission:</strong> Implemented a
+                  user-friendly interface allowing individuals to create, save,
+                  and submit personalized workout routines.
+                </li>
+                <li>
+                  <strong>Achievement Badges:</strong> Incorporated a
+                  gamification aspect by awarding users with badges upon the
+                  completion of specific fitness milestones, fostering
+                  motivation and consistent platform engagement.
+                </li>
+                <li>
+                  <strong>Health Metrics Calculator:</strong> Introduced
+                  features that allow users to compute vital health parameters,
+                  including their ideal body weight, body mass index, 
+                  body fat calculator and basal metabolic rate ensuring they remain
+                  informed and can set realistic fitness goals.
+                </li>
+                <li>
+                  <strong>User Account Management:</strong> Designed a secure
+                  and intuitive account section, facilitating users to
+                  seamlessly manage their profiles, workout history, and earned
+                  badges.
+                </li>
+              </ul>
+              <div className="flex flex-row items-center justify-start  gap-3">
+                <img src="/tools.png" width={28} height={28} alt="features" />
+                <p className="my-4">
+                  Developed with a robust tech stack including:
+                </p>
+              </div>
+
+              <ul className="mt-2 flex flex-col items-start justify-center gap-2">
+                <li>
+                  <strong>Frontend:</strong>React, NextJS 13, and Tailwind CSS
+                  for a responsive and dynamic user experience.
+                </li>
+                <li>
+                  <strong>Backend:</strong>Node.js, enhanced with Mongoose for
+                  seamless MongoDB integrations.
+                </li>
+                <li>
+                  <strong>Database:</strong>MongoDB for scalable and reliable
+                  data management.
+                </li>
+                <li>
+                  <strong>Authentication:</strong> Implemented NextAuth and JWT
+                  to ensure user data security.
+                </li>
+                <li>
+                  <strong>Third-Party Integrations: </strong>Utilized RapidAPI
+                  for health calculators, enhancing the platform's
+                  functionality.
+                </li>
+              </ul>
+            </div>
+          }
           tools={["nextjs", "nextauth", "mongodb", "tailwind"]}
           image="mockups3.png"
           color="underlinedText3"
