@@ -63,7 +63,7 @@ const ProjectCardContent = ({ title, description, tools, color, githubLink, live
 const ProjectCard = (props) => {
   return (
     <div
-      className={`border mx-auto shadow-lg h-1/4 md:grid grid-cols-projectsCard 
+      className={`border mx-auto shadow-lg h-1/4 lg:grid grid-cols-projectsCard 
     grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
     >
       <div className={`h-full w-2 row-span-5 bg-${props.color}`}></div>
@@ -73,7 +73,7 @@ const ProjectCard = (props) => {
         className="h-full row-span-5 overflow-hidden object-center 
       flex items-center justify-center"
       >
-        <img src={props.image} className=" max-h-[340px]" />
+        <img src={props.image} className="max-h-[300px] md:max-h-[440px]" />
       </div>
     </div>
   );
@@ -82,14 +82,14 @@ const ProjectCard = (props) => {
 const ReversedProjectCard = (props) => {
   return (
     <div
-      className={`border  mx-auto shadow-lg h-1/4 md:grid 
+      className={`border  mx-auto shadow-lg h-1/4 lg:grid 
     grid-cols-projectsCardReversed grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
     >
       <div
         className="h-full row-span-5 overflow-hidden object-center 
       flex items-center justify-center"
       >
-        <img src={props.image} className=" max-h-[340px]" />
+        <img src={props.image} className="max-h-[300px] md:max-h-[440px]" />
       </div>
       <ProjectCardContent {...props} reversed />
       <div className={`h-full w-2 row-span-5 bg-${props.color}`}></div>
@@ -171,8 +171,8 @@ const Projects = () => {
                 <li>
                   <strong>Health Metrics Calculator:</strong> Introduced
                   features that allow users to compute vital health parameters,
-                  including their ideal body weight, body mass index, 
-                  body fat calculator and basal metabolic rate ensuring they remain
+                  including their ideal body weight, body mass index, body fat
+                  calculator and basal metabolic rate ensuring they remain
                   informed and can set realistic fitness goals.
                 </li>
                 <li>
@@ -191,19 +191,19 @@ const Projects = () => {
 
               <ul className="mt-2 flex flex-col items-start justify-center gap-2">
                 <li>
-                  <strong>Frontend:</strong>React, NextJS 13, and Tailwind CSS
+                  <strong>Frontend: </strong>React, NextJS 13, and Tailwind CSS
                   for a responsive and dynamic user experience.
                 </li>
                 <li>
-                  <strong>Backend:</strong>Node.js, enhanced with Mongoose for
+                  <strong>Backend: </strong>Node.js, enhanced with Mongoose for
                   seamless MongoDB integrations.
                 </li>
                 <li>
-                  <strong>Database:</strong>MongoDB for scalable and reliable
+                  <strong>Database: </strong>MongoDB for scalable and reliable
                   data management.
                 </li>
                 <li>
-                  <strong>Authentication:</strong> Implemented NextAuth and JWT
+                  <strong>Authentication: </strong> Implemented NextAuth and JWT
                   to ensure user data security.
                 </li>
                 <li>
@@ -223,11 +223,65 @@ const Projects = () => {
 
         <ReversedProjectCard
           title="Code with Aloha"
-          description="Code with Aloha is a civic-minded volunteers group 
-          interested in using technology and open data to make local 
-          communities better. I am proud to be part of this amazing group and
-          the first project I contributed with was building a fresh website
-          in NextJS to better represent the groups' needs and style."
+          description={
+            <div>
+              <div className="flex flex-row items-center text-justify gap-3">
+                <img
+                  src="./features.png"
+                  width={32}
+                  height={32}
+                  alt="features"
+                />
+                <p>
+                  Engineered a vibrant website for "Code with Aloha", a group of
+                  civic-minded tech enthusiasts. As a proud member of this team,
+                  I helped showcase our collective dedication towards community
+                  improvement through technology.
+                </p>
+              </div>
+
+              <ul className="mt-2 text-left flex flex-col items-start justify-center gap-2">
+                <li>
+                  <strong>About Us:</strong> Elegantly presents the team, their
+                  history since 2009, and their core focus: meeting new
+                  individuals, making impactful differences, and fostering
+                  experience.
+                </li>
+                <li>
+                  <strong>Events & Announcements:</strong> A dedicated section
+                  about what to expect at a meeting, showcasing Meetup events,
+                  and guiding visitors on what to anticipate during such
+                  gatherings.
+                </li>
+                <li>
+                  <strong>Project Portfolios:</strong> Insightfully categorized
+                  into active and historic projects, each with a comprehensive
+                  description and pertinent links, providing a detailed journey
+                  of the team's contributions over time.
+                </li>
+                <li>
+                  <strong>Client Engagements:</strong> Displaying the diverse
+                  clientele and offering a structured channel for potential
+                  clients to establish contact.
+                </li>
+                <li>
+                  <strong>Volunteer Sign-Up:</strong> An intuitive section
+                  providing potential volunteers with direct links to upcoming
+                  Meetup events and a dedicated contact email, inviting them to
+                  join and become an integral part of our evolving story.
+                </li>
+              </ul>
+              <div className="text-left flex flex-row items-center justify-start gap-4">
+                <img src="/tools.png" width={28} height={28} alt="features" />
+                <p className="my-4">
+                  Utilized NextJS and React for a dynamic and responsive user
+                  interface, styled to perfection with Tailwind CSS.
+                  Incorporated framer-motion for smooth animations and
+                  transitions.
+                </p>
+              </div>
+            </div>
+          }
           tools={["react", "nextjs", "tailwind", "framer_motion"]}
           image="mockups1.png"
           color="underlinedText2"
@@ -236,14 +290,57 @@ const Projects = () => {
         />
         <ProjectCard
           title="Bayze mobile"
-          description="A frontend mobile app built for Bayze Inc startup, as a 
-          social media platform for Bayze members to connect with thier friends, see the 
-          latest badges and achievements they earned and share their own. 
-          This React Native app has some important functionalities: see 
-           and search posts, see badges earned for each app that usrs Bayze, 
-           receive notifications and your profile"
+          description={
+            <div>
+              <div className="flex flex-row items-center text-justify gap-3">
+                <img
+                  src="./features.png"
+                  width={32}
+                  height={32}
+                  alt="features"
+                />
+                <p>
+                  Crafted a React Native frontend mobile app for Bayze Inc.—a
+                  data and AI startup focused on gamification and loyalty
+                  programs. The app serves as a social media platform for Bayze
+                  members, enabling them to:
+                </p>
+              </div>
+
+              <ul className="mt-2 flex flex-col items-start justify-center gap-2">
+                <li>
+                  <strong>Connect & Share:</strong> Engage with friends, view
+                  their recent achievements, and share personal badges.
+                </li>
+                <li>
+                  <strong>Badge Overview:</strong> Explore badges earned across
+                  various apps integrated with Bayze.
+                </li>
+                <li>
+                  <strong>Notifications:</strong> Stay updated with earned
+                  badges, messages, apps udates, competitions, challenges and peer comparisons.
+                </li>
+                <li>
+                  <strong>Post Exploration:</strong> Browse and search for posts
+                  within the platform, see what your friends are doing and what
+                   your favorite companies are posting.
+                </li>
+                <li>
+                  <strong>Profile Management:</strong> A dedicated section for
+                  users to manage their account details and view achievements.
+                </li>
+              </ul>
+              <p className="pt-4">
+                {" "}
+                It's worth noting that while the app provides a comprehensive
+                frontend experience, backend integrations and user
+                authentication are yet to be established, making some
+                functionalities frontend-only.
+              </p>
+            </div>
+          }
           tools={["react_native", "expo"]}
-          image="mockups2.png"
+          image="mockups4.png"
           color="underlinedText1"
           githubLink="https://github.com/Alexandra-Haynes/bayze-mobile"
           liveLink=""
