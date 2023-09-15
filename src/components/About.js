@@ -28,7 +28,6 @@ const About = () => {
         </div>
         <Skills />
 
-        {/* <ConnectWithMe /> */}
       </section>
     </>
   );
