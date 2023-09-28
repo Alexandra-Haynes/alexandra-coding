@@ -218,7 +218,7 @@ const Projects = () => {
           image="mockups3.png"
           color="underlinedText3"
           githubLink="https://github.com/Alexandra-Haynes/fitness-app"
-          liveLink="https://myworkouts.vercel.app/"
+          liveLink="https://my-workouts-hexieyj9b-alexandra-haynes.vercel.app/"
         />
 
         <ReversedProjectCard
@@ -318,12 +318,13 @@ const Projects = () => {
                 </li>
                 <li>
                   <strong>Notifications:</strong> Stay updated with earned
-                  badges, messages, apps udates, competitions, challenges and peer comparisons.
+                  badges, messages, apps udates, competitions, challenges and
+                  peer comparisons.
                 </li>
                 <li>
                   <strong>Post Exploration:</strong> Browse and search for posts
                   within the platform, see what your friends are doing and what
-                   your favorite companies are posting.
+                  your favorite companies are posting.
                 </li>
                 <li>
                   <strong>Profile Management:</strong> A dedicated section for
