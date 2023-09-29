@@ -28,7 +28,7 @@ const Footer = () => {
             target="_blank"
             className="hover:scale-105"
             aria-label="Link to Alexandra's GitHub profile"
-            tabindex="0"
+            tabIndex="0"
           >
             <BsGithub fontSize={30} />
           </a>
@@ -37,7 +37,7 @@ const Footer = () => {
             className="hover:scale-105"
             target="_blank"
             aria-label="Link to Alexandra's LinkedIn profile"
-            tabindex="0"
+            tabIndex="0"
           >
             <FaLinkedinIn fontSize={36} />
           </a>
@@ -46,7 +46,7 @@ const Footer = () => {
             className="hover:scale-105"
             target="_blank"
             aria-label="Link to Alexandra's LeetCode profile"
-            tabindex="0"
+            tabIndex="0"
           >
             <SiLeetcode fontSize={32} />
           </a>

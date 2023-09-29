@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { BsCode, BsEye } from "react-icons/bs";
 
-
-
 const LinkButton = ({ link, color, icon, text }) => {
   return (
     <a
@@ -24,13 +22,27 @@ const ToolsList = ({ tools }) => (
   <ul className="flex flex-row gap-2 py-6">
     {tools.map((tool, index) => (
       <li key={index}>
-        <img src={`/${tool}.png`} alt={tool} width="40px" height="40px" title={tool} />
+        <img
+          src={`/${tool}.png`}
+          alt={tool}
+          width="40px"
+          height="40px"
+          title={tool}
+        />
       </li>
     ))}
   </ul>
 );
 
-const ProjectCardContent = ({ title, description, tools, color, githubLink, liveLink, reversed }) => {
+const ProjectCardContent = ({
+  title,
+  description,
+  tools,
+  color,
+  githubLink,
+  liveLink,
+  reversed,
+}) => {
   return (
     <div
       className={`row-span-5 flex flex-col ${
@@ -50,11 +62,13 @@ const ProjectCardContent = ({ title, description, tools, color, githubLink, live
         <LinkButton link={githubLink} icon={<BsCode />} text="Source Code" />
       </div>
 
-      <p
-        className={`max-w-[800px] text-justify text-[.8rem] ${reversed ? "text-right" : ""}`}
+      <div
+        className={`max-w-[800px] text-justify text-[.8rem] ${
+          reversed ? "text-right" : ""
+        }`}
       >
         {description}
-      </p>
+      </div>
       <ToolsList tools={tools} />
     </div>
   );
@@ -62,54 +76,45 @@ const ProjectCardContent = ({ title, description, tools, color, githubLink, live
 
 const ProjectCard = (props) => {
   return (
-    <div
-      className={`border mx-auto shadow-lg h-1/4 lg:grid grid-cols-projectsCard 
-    grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
+    <article
+      className={`border mx-auto shadow-lg h-1/4 lg:grid grid-cols-projectsCard grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
     >
-      <div className={`h-full w-2 row-span-5 bg-${props.color}`}></div>
+      <div
+        className={`h-full w-2 row-span-5 bg-${props.color}`}
+        aria-hidden="true"
+      ></div>
 
       <ProjectCardContent {...props} />
-      <div
-        className="h-full row-span-5 overflow-hidden object-center 
-      flex items-center justify-center"
-      >
-        <img src={props.image} className="max-h-[300px] md:max-h-[440px]" />
+      <div className="h-full row-span-5 overflow-hidden object-center flex items-center justify-center">
+        <Image src={props.image} alt={props.title} width={440} height={300} />
       </div>
-    </div>
+    </article>
   );
 };
 
 const ReversedProjectCard = (props) => {
   return (
-    <div
-      className={`border  mx-auto shadow-lg h-1/4 lg:grid 
-    grid-cols-projectsCardReversed grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
+    <article
+      className={`border mx-auto shadow-lg h-1/4 lg:grid grid-cols-projectsCardReversed grid-rows-5 lg:w-[80%] w-[92%] bg-white`}
     >
-      <div
-        className="h-full row-span-5 overflow-hidden object-center 
-      flex items-center justify-center"
-      >
-        <img src={props.image} className="max-h-[300px] md:max-h-[440px]" />
+      <div className="h-full row-span-5 overflow-hidden object-center flex items-center justify-center">
+        <Image src={props.image} alt={props.title} width={440} height={300} />
       </div>
       <ProjectCardContent {...props} reversed />
-      <div className={`h-full w-2 row-span-5 bg-${props.color}`}></div>
-    </div>
+      <div
+        className={`h-full w-2 row-span-5 bg-${props.color}`}
+        aria-hidden="true"
+      ></div>
+    </article>
   );
 };
 
-
 const Projects = () => {
   return (
-    <section id="projects" className="">
-      <div
-        className="h-fit min-h-screen p-4 pt-24  flex flex-col gap-4 
-      justify-center items-center bg-bgCyan pb-12 "
-      >
+    <main id="projects" className="bg-bgCyan">
+      <div className="h-fit min-h-screen p-4 pt-24 flex flex-col gap-4 justify-center items-center pb-12">
         <div className="relative mb-4">
-          <h2
-            className="font-semibold text-xl uppercase absolute
-         text-cyan-100/50 left-1 top-1"
-          >
+          <h2 className="font-semibold text-xl uppercase absolute text-cyan-100/50 left-1 top-1">
             Projects
           </h2>
           <h1 className="font-semibold text-xl relative uppercase">Projects</h1>
@@ -124,7 +129,7 @@ const Projects = () => {
                   src="./features.png"
                   width={32}
                   height={32}
-                  alt="features"
+                  alt="features icon"
                 />
                 <p>
                   Developed a comprehensive fitness web application with the
@@ -132,10 +137,7 @@ const Projects = () => {
                 </p>
               </div>
 
-              <ul
-                className="mt-2 flex flex-col items-start justify-center
-               gap-2"
-              >
+              <ul className="mt-2 flex flex-col items-start justify-center gap-2">
                 <li>
                   <strong>Exercise Database:</strong> Enabled users to dive deep
                   into an expansive collection of over 800 individual exercises.
@@ -182,8 +184,8 @@ const Projects = () => {
                   badges.
                 </li>
               </ul>
-              <div className="flex flex-row items-center justify-start  gap-3">
-                <img src="/tools.png" width={28} height={28} alt="features" />
+              <div className="flex flex-row items-center justify-start gap-3">
+                <img src="/tools.png" width={28} height={28} alt="tools icon" />
                 <p className="my-4">
                   Developed with a robust tech stack including:
                 </p>
@@ -215,7 +217,7 @@ const Projects = () => {
             </div>
           }
           tools={["nextjs", "nextauth", "mongodb", "tailwind"]}
-          image="mockups3.png"
+          image="/mockups3.png"
           color="underlinedText3"
           githubLink="https://github.com/Alexandra-Haynes/fitness-app"
           liveLink="https://my-workouts-hexieyj9b-alexandra-haynes.vercel.app/"
@@ -230,7 +232,7 @@ const Projects = () => {
                   src="./features.png"
                   width={32}
                   height={32}
-                  alt="features"
+                  alt="features icon"
                 />
                 <p>
                   Engineered a vibrant website for "Code with Aloha", a group of
@@ -272,7 +274,7 @@ const Projects = () => {
                 </li>
               </ul>
               <div className="text-left flex flex-row items-center justify-start gap-4">
-                <img src="/tools.png" width={28} height={28} alt="features" />
+                <img src="/tools.png" width={28} height={28} alt="tools icon" />
                 <p className="my-4">
                   Utilized NextJS and React for a dynamic and responsive user
                   interface, styled to perfection with Tailwind CSS.
@@ -283,11 +285,12 @@ const Projects = () => {
             </div>
           }
           tools={["react", "nextjs", "tailwind", "framer_motion"]}
-          image="mockups1.png"
+          image="/mockups1.png"
           color="underlinedText2"
           githubLink="https://github.com/CodeWithAloha/CWAWebsite"
           liveLink="https://code-with-aloha.vercel.app/"
         />
+
         <ProjectCard
           title="Bayze mobile"
           description={
@@ -297,7 +300,7 @@ const Projects = () => {
                   src="./features.png"
                   width={32}
                   height={32}
-                  alt="features"
+                  alt="features icon"
                 />
                 <p>
                   Crafted a React Native frontend mobile app for Bayze Inc.—a
@@ -318,7 +321,7 @@ const Projects = () => {
                 </li>
                 <li>
                   <strong>Notifications:</strong> Stay updated with earned
-                  badges, messages, apps udates, competitions, challenges and
+                  badges, messages, apps updates, competitions, challenges and
                   peer comparisons.
                 </li>
                 <li>
@@ -341,13 +344,13 @@ const Projects = () => {
             </div>
           }
           tools={["react_native", "expo"]}
-          image="mockups4.png"
+          image="/mockups4.png"
           color="underlinedText1"
           githubLink="https://github.com/Alexandra-Haynes/bayze-mobile"
           liveLink=""
         />
       </div>
-    </section>
+    </main>
   );
 };
 
