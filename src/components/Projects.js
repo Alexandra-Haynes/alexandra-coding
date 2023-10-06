@@ -346,7 +346,7 @@ const Projects = () => {
           tools={["react_native", "expo"]}
           image="/mockups4.png"
           color="underlinedText1"
-          githubLink="https://github.com/Alexandra-Haynes/bayze-mobile"
+          githubLink="https://github.com/Alexandra-Haynes/social-media-mobile"
           liveLink=""
         />
       </div>
